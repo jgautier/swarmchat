@@ -1,0 +1,22 @@
+{
+  "name": "swarmrepl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "buffer-alloc-unsafe": "^1.0.0",
+    "chalk": "^2.4.1",
+    "dat-swarm-defaults": "^1.0.1",
+    "discovery-channel": "^5.5.1",
+    "discovery-swarm": "^5.1.1",
+    "hypercore": "git+https://github.com/jgautier/hypercore.git",
+    "moment": "^2.22.1",
+    "random-access-memory": "^3.0.0",
+    "sodium-universal": "^2.0.0"
+  }
+}
