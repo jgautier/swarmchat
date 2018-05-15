@@ -13,13 +13,13 @@ const myChannelFeed = new PassThrough({ objectMode: true });
 const discoverySwarm = swarm(defaults());
 discoverySwarm.listen();
 discoverySwarm.join(channelHash);
-discoverySwarm.on('connection', (stream) => {
+discoverySwarm.on('connection', (stream, info) => {
     readLine
     .createInterface({input: stream, crlfDelay: Infinity})
     .on('line', line => {
         const msg = JSON.parse(line)
         const ts = chalk.green((moment(msg.ts)).format('ddd, hh:mm:ssA'))
-        const from = chalk.yellow(userName)
+        const from = chalk.yellow(msg.userName)
         const body = chalk.white(msg.body)
 
         console.info(`\r[${ts}] ${from}: ${body}`)
